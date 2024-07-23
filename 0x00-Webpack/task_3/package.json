@@ -1,7 +1,7 @@
 {
-  "name": "task_2",
+  "name": "task_3",
   "version": "1.0.0",
-  "description": "Adding CSS and Images webpack",
+  "description": "Dev servers, modules, and tree shaking",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,12 @@
   "devDependencies": {
     "html-webpack-plugin": "^5.6.0",
     "webpack": "^5.93.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "style-loader": "^3.2.1",
+    "webpack-dev-server": "^3.11.2"
   }
 }
