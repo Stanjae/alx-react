@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, '../src/index.js'),
   performance: {
     maxAssetSize: 1000000,
     hints: false,
@@ -18,13 +18,13 @@ module.exports = {
     },
   },
   devServer: {
-    contentBase: path.join(__dirname, './dist'),
+    contentBase: path.join(__dirname, '../dist'),
     compress: true,
     port: 8564,
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
   },
   module: {
     rules: [
@@ -46,10 +46,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jsx|js)$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          query: {
+              presets: ['es2015']
+          },
           options: {
             presets: ['@babel/preset-env'],
             plugins: [require('@babel/plugin-proposal-object-rest-spread')]
